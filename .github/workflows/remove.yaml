@@ -1,0 +1,16 @@
+name: remove label
+
+on:
+  pull requests:
+    types: [labeled]
+
+jobs:
+  Remove_Labeled_Issue_On_Project_Board:
+    runs-on: ubuntu-latest
+   - name: Remove ticket
+      uses: pauldruziak/move-labeled-or-milestoned-pull-request@v1.0.2
+      with:
+        project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
+        label-name: "bug"
+        delete-card: "true"
+        action-token: "${{ secrets.ACTION_SECRET }}"
