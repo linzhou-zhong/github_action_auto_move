@@ -8,7 +8,7 @@ jobs:
   Move_Labeled_Issue_On_Project_Board:
     runs-on: ubuntu-latest
     steps:
-    - name: Move meta ready to the Ready column
+    - name: Move bug ready to the Bug column
       uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
       with:
         project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
@@ -16,7 +16,7 @@ jobs:
         column-name: "Bug"
         action-token: "${{ secrets.ACTION_SECRET }}"
 
-    - name: Move meta ready to the Ready column
+    - name: Move question ready to the Question column
       uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
       with:
         project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
@@ -33,10 +33,10 @@ jobs:
         column-name: "Done"
         action-token: "${{ secrets.ACTION_SECRET }}"
 
-    - name: Remove ticket
-      uses: alex-page/github-project-automation-plus@v0.8.1
-      with:
-        project: "Backlog"
-        column: "Done"
-        action: "delete"
-        repo-token: "${{ secrets.ACTION_SECRET }}"
+#    - name: Remove ticket
+#      uses: alex-page/github-project-automation-plus@v0.8.1
+#      with:
+#        project: Backlog
+#        column: Done
+#        action: delete
+#        repo-token: "${{ secrets.ACTION_SECRET }}"
