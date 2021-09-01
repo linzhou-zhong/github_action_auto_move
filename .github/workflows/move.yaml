@@ -5,7 +5,7 @@ on:
     types: [labeled]
 
 jobs:
-  Remove_Labeled_Issue_On_Project_Board:
+  Move_Labeled_Issue_To_Another_Project_Board:
     runs-on: ubuntu-latest
     steps:
     - name: Move to new project
