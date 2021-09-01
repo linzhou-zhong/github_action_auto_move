@@ -15,3 +15,12 @@ jobs:
         label-name: "bug"
         column-name: "Bug"
         action-token: "${{ secrets.ACTION_SECRET }}"
+
+    - name: Move meta ready to the Ready column
+      uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
+        label-name: "question"
+        column-name: "Ready"
+        columns-to-ignore: "Bug"
+        action-token: "${{ secrets.ACTION_SECRET }}"
