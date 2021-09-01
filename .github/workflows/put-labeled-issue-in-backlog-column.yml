@@ -1,3 +1,5 @@
+name: labeled issue auto move
+
 on:
   issues:
     types: [labeled]
