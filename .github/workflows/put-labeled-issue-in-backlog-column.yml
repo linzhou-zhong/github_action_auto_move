@@ -34,9 +34,9 @@ jobs:
         action-token: "${{ secrets.ACTION_SECRET }}"
 
     - name: Remove ticket
-      uses: alex-page/github-project-automation-plus@v0.8.1
+      uses: pauldruziak/move-labeled-or-milestoned-pull-request@v1.0.2
       with:
-        project: Backlog
-        column: Done
-        action: delete
-        repo-token: "${{ secrets.ACTION_SECRET }}"
+        action-token: "${{ secrets.ACTION_SECRET }}"
+        project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
+        label-name: "done"
+        delete-card: "true"
