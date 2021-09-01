@@ -14,4 +14,4 @@ jobs:
         project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/2"
         label-name: "bug"
         column-name: "Done"
-        action-token: "${{ secrets.ACTION_SECRET }}""
+        action-token: "${{ secrets.ACTION_SECRET }}"
