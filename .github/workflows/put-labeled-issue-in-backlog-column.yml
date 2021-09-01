@@ -34,7 +34,7 @@ jobs:
         action-token: "${{ secrets.ACTION_SECRET }}"
 
     - name: Remove ticket
-      uses: justgiveacar/move-labeled-or-milestoned-pull-request
+      uses: justgiveacar/move-labeled-or-milestoned-pull-request@v1.0.2
       with:
         action-token: "${{ secrets.ACTION_SECRET }}"
         project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
