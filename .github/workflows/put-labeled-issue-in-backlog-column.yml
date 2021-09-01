@@ -33,10 +33,10 @@ jobs:
         column-name: "Done"
         action-token: "${{ secrets.ACTION_SECRET }}"
 
-#    - name: Remove ticket
-#      uses: alex-page/github-project-automation-plus@v0.8.1
-#      with:
-#        project: Backlog
-#        column: Done
-#        action: delete
-#        repo-token: "${{ secrets.ACTION_SECRET }}"
+    - name: Remove ticket
+      uses: alex-page/github-project-automation-plus@v0.8.1
+      with:
+        project: Backlog
+        column: Done
+        action: delete
+        repo-token: "${{ secrets.ACTION_SECRET }}"
