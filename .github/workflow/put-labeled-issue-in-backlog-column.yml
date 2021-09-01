@@ -1,0 +1,15 @@
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  Move_Labeled_Issue_On_Project_Board:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Move meta ready to the Ready column
+      uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
+        label-name: "bug"
+        column-name: "Bug"
+        action-token: "${{ secrets.ACTION_SECRET }}"
