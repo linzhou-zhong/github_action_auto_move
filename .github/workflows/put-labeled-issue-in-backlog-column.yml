@@ -33,6 +33,14 @@ jobs:
         delete-card: "true"
         action-token: "${{ secrets.ACTION_SECRET }}"
 
+    - name: Remove ticket
+    - uses: alex-page/github-project-automation-plus@v0.8.1
+      with:
+        project: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
+        column: "bug"
+        action: "delete"
+        repo-token: "${{ secrets.ACTION_SECRET }}"
+
     - name: Move to new project
       uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
       with:
