@@ -1,17 +1,17 @@
-name: Remove ticket
-
-on:
-  issues:
-    types: [labeled]
-
-jobs:
-  Remove_Labeled_Issue_On_Project_Board:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Remove ticket
-      uses: alex-page/github-project-automation-plus@v0.8.1
-      with:
-        project: "Backlog"
-        column: "Bug"
-        action: "delete"
-        repo-token: "${{ secrets.ACTION_SECRET }}"
+#name: Remove ticket
+#
+#on:
+#  issues:
+#    types: [labeled]
+#
+#jobs:
+#  Remove_Labeled_Issue_On_Project_Board:
+#    runs-on: ubuntu-latest
+#    steps:
+#    - name: Remove ticket
+#      uses: alex-page/github-project-automation-plus@v0.8.1
+#      with:
+#        project: "Backlog"
+#        column: "Bug"
+#        action: "delete"
+#        repo-token: "${{ secrets.ACTION_SECRET }}"
