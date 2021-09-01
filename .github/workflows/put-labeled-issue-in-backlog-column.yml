@@ -30,7 +30,6 @@ jobs:
       with:
         action-token: "${{ secrets.ACTION_SECRET }}"
         project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
-        column-name: "Bug"
         label-name: "bug"
         delete-card: "true"
 
