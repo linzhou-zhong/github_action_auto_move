@@ -21,7 +21,7 @@ jobs:
       with:
         project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
         label-name: "question"
-        column-name: "Ready"
+        column-name: "Question"
         columns-to-ignore: "Bug"
         action-token: "${{ secrets.ACTION_SECRET }}"
 
@@ -29,6 +29,14 @@ jobs:
       uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
       with:
         project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/2"
-        label-name: "bug"
+        label-name: "done"
         column-name: "Done"
         action-token: "${{ secrets.ACTION_SECRET }}"
+
+    - name: Remove ticket
+      uses: alex-page/github-project-automation-plus@v0.8.1
+      with:
+        project: "Backlog"
+        column: "Done"
+        action: "delete"
+        repo-token: "${{ secrets.ACTION_SECRET }}"
