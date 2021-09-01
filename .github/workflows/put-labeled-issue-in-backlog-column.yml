@@ -24,3 +24,20 @@ jobs:
         column-name: "Ready"
         columns-to-ignore: "Bug"
         action-token: "${{ secrets.ACTION_SECRET }}"
+
+    - name: Remove ticket
+      uses: pauldruziak/move-labeled-or-milestoned-pull-request@v1.0.2
+      with:
+        action-token: "${{ secrets.ACTION_SECRET }}"
+        project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
+        column-name: "Bug"
+        label-name: "bug"
+        delete-card: "true"
+
+    - name: Move to new project
+      uses: konradpabjan/move-labeled-or-milestoned-issue@v2.0
+      with:
+        project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/2"
+        label-name: "bug"
+        column-name: "Bug"
+        action-token: "${{ secrets.ACTION_SECRET }}"
