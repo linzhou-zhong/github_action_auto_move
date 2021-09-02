@@ -26,7 +26,7 @@ jobs:
         action-token: "${{ secrets.ACTION_SECRET }}"
 
     - name: Remove ticket
-      uses: justgiveacar/move-labeled-or-milestoned-issue@v2.0
+      uses: justgiveacar/move-labeled-or-milestoned-issue@v3.0
       with:
         project-url: "https://github.com/linzhou-zhong/github_action_auto_move/projects/1"
         label-name: "done"
